@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
     // TODO: Replace with ExploreScreen
     ExploreScreen(),
 
-    Container(color: Colors.white),
+    // Container(color: Colors.white),
     // TODO: Replace with RecipesScreen
     RecipesScreen(),
     Container(color: Colors.green),

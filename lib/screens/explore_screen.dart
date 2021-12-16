@@ -23,7 +23,15 @@ class ExploreScreen extends StatelessWidget {
           // 5
           final recipes = snapshot.data?.todayRecipes ?? []; //if null then []
           // TODO: Replace this with TodayRecipeListView
-          return TodayRecipeListView(recipes: recipes);
+          return ListView(scrollDirection: Axis.vertical, children: [
+            TodayRecipeListView(recipes: snapshot.data?.todayRecipes ?? []),
+            const SizedBox(height: 16),
+            FriendPostListView(friendPosts: snapshot.data?.friendPosts ?? []),
+            // Container(
+            //   height: 400,
+            //   color: Colors.green,
+            // )
+          ]);
 
           // return Center(
           //   child: Container(
